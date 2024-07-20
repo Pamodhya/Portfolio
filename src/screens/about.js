@@ -8,11 +8,11 @@ function about() {
       </div>
       <div className="flex w-full mt-10">
         <div className="photo w-1/2 flex justify-center items-center">
-          <img
-            src="/images/photo.jpeg"
-            alt="Image"
-            className="w-72 h-auto max-w-md"
-          />
+        <img
+                src="/images/p-69213  2.jpg"
+                alt="Image"
+                className="w-72 h-auto max-w-md"
+              />
         </div>
         <div className="details w-1/2  items-center">
           <div className="text-3xl font-semibold text-pink-700">
@@ -35,6 +35,7 @@ function about() {
               <p>4</p>
             </button>
           </div>
+          <br/><br/>
           <div className="details w-2/3 flex justify-center items-center mt-12">
           <div className="content-center">
             <p className="text-justify">
