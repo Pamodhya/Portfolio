@@ -8,6 +8,7 @@ import {
   faLinkedin,
   faGithubSquare,
 } from "@fortawesome/free-brands-svg-icons";
+import Background3D from "../components/bg-animation";
 
 function Home() {
   const containerRef = useRef(null);
@@ -30,23 +31,36 @@ function Home() {
 
   return (
     <div className="page-container" ref={containerRef}>
-      <div className="page page1">
-        <div className="flex">
+      <div className="page page1 relative" style={{ position: "relative" }}>
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: 0,
+            pointerEvents: "none",
+          }}
+        >
+          <Background3D />
+        </div>
+        <div className="flex relative z-10">
           <div className="mt-60 font-semibold">
-            <h1 className="text-left ml-60 text-3xl font-extrabold">
+            <h1 className="text-left ml-60 text-5xl font-extrabold text-white ">
               Hi There !
             </h1>
-            <h1 className="text-left ml-60 text-3xl font-extrabold">
+            <h1 className="text-left ml-60 text-5xl font-extrabold  text-white">
               I'm a full stack{" "}
-              <span className="developer-text text-pink-700">Developer</span>
+              <span className="developer-text text-yellow-300">Developer</span>
             </h1>
             <div className="mt-10">
               <a href="mailto:Pamodhyaprabhashi@gmail.com">
-                <button className="px-4 py-2 ml-60 border-2 border-solid border-green-500 bg-green-500 hover:bg-green-600 hover:text-white">
+                <button className="px-4 py-2 ml-60 border-2 border-solid text-white border-yellow-500 bg-yellow-500 hover:bg-black hover:text-white">
                   Hire me
                 </button>
               </a>
-              <button className="px-4 py-2 ml-4 border-2 border-solid border-green-500 hover:bg-green-600 hover:text-white">
+              <button className="px-4 py-2 ml-4 border-2 border-solid border-yellow-500 hover:bg-yellow-500 hover:text-white text-white">
                 Download CV
               </button>
             </div>
@@ -92,58 +106,59 @@ function Home() {
                   <FontAwesomeIcon
                     icon={faGithubSquare}
                     size="3x"
-                    style={{ color: "#181717" }}
+                    style={{ color: "#FFFFFF" }} // Changed color to white
                   />
                 </a>
               </div>
             </div>
           </div>
-          <div className="AnimeImage ml-40 mt-16">
+          <div className="AnimeImage ml-48 mt-36">
             <img
-              src="/images/anime.png"
+              src="/images/anime2.webp"
               alt="Anime Image"
               className="w-full h-auto max-w-md"
             />
           </div>
         </div>
       </div>
-      <div className="page page2">
+      <div className="page page2  mt-28">
         <div>
           <div>
             <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200  sm:mt-8 sm:pt-6 lg:mx-0 lg:max-w-none lg:grid-cols-3"></div>
-            <h1 className="mt-10 text-4xl font-bold text-center">About me</h1>
+            <h1 className="mt-10 text-5xl text-white font-bold text-center">
+              About me
+            </h1>
           </div>
           <div className="flex w-full mt-10">
             <div className="photo w-1/2 flex justify-center items-center">
               <img
-                src="/images/p-69213  2.jpg"
+                src="/images/photo.jpeg"
                 alt="Image"
-                className="w-72 h-auto max-w-md"
+                className="w-72 h-auto max-w-md rounded-tl-lg rounded-br-lg"
               />
             </div>
             <div className="details w-1/2  items-center">
-              <div className="text-3xl font-semibold text-pink-700">
+              <div className="text-3xl font-semibold text-white">
                 Pamodhya Thotahewa
               </div>
-              <div className="text-xl font-thin text-green-500">
+              <div className="text-xl font-thin text-yellow-400">
                 Full stack web developer
               </div>
               <div className="flex mt-10">
-                <button className="border-2 border-solid border-yellow-300 px-8 py-2 ">
-                  <p className="font-semibold text-blue-900">Location</p>
+                <button className="border-2 border-solid text-white border-white px-8 py-2 ">
+                  <p className="font-semibold text-yellow-400">Location</p>
                   <p>Matale,Sri Lanka</p>
                 </button>
-                <button className="border-2 border-solid border-yellow-300 px-8 py-2 ml-10">
-                  <p className="font-semibold  text-blue-900">Age</p>
+                <button className="border-2 border-solid text-white border-white px-8 py-2 ml-10">
+                  <p className="font-semibold   text-yellow-400">Age</p>
                   <p>22</p>
                 </button>
-                <button className="border-2 border-solid border-yellow-300 px-8 py-2 ml-10 ">
-                  <p className="font-semibold  text-blue-900">Projects</p>
-                  <p>4</p>
+                <button className="border-2 border-solid text-white border-white px-8 py-2 ml-10 ">
+                  <p className="font-semibold  text-yellow-400">Projects</p>
+                  <p>10+</p>
                 </button>
               </div>
-              <br/><br/>
-              <div className="details w-2/3 flex justify-center items-center mt-12">
+              <div className="details w-2/3 flex justify-center items-center mt-12 text-white">
                 <div className="content-center">
                   <p className="text-justify">
                     Passionate and driven ReactJS developer with a strong
@@ -159,13 +174,13 @@ function Home() {
             </div>
           </div>
         </div>
-        <br />
-        <br />
       </div>
       <div className="page page3">
         <div>
           <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200  sm:mt-8 sm:pt-6 lg:mx-0 lg:max-w-none lg:grid-cols-3"></div>
-          <h1 className="mt-10 text-4xl font-bold text-center">Tech stack</h1>
+          <h1 className="mt-10 text-5xl text-white font-bold mt-10 text-center">
+            Tech stack
+          </h1>
           <br />
           <br />
           <div className="flex justify-center">
@@ -209,141 +224,149 @@ function Home() {
         <br />
         <br />
       </div>
+
       <div className="page page4">
         <div>
-          <div>
-            <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200  sm:mt-8 sm:pt-6 lg:mx-0 lg:max-w-none lg:grid-cols-3"></div>
-            <h1 className="mt-10 text-4xl font-bold text-center">Education</h1>
-            <br />
-            <div className="flex items-center justify-center mt-10">
-              <div className="containerr border border-solid border-black w-3/4 flex">
-                <div className="w-1/4  p-4 flex items-center justify-center">
+        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200  sm:mt-8 sm:pt-6 lg:mx-0 lg:max-w-none lg:grid-cols-3"></div>
+          <h1 className="mt-10 text-5xl text-white font-bold text-center">
+            Education
+          </h1>
+          <div className="mt-10 mx-auto max-w-7xl grid grid-cols-2 gap-x-20 gap-y-8">
+            {/* 1st Container - Left Column */}
+            <div className="containerr border border-solid border-white rounded-lg p-4 w-3/5 self-start">
+              <div className="flex">
+                <div className="p-2 flex items-center">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/en/a/a6/SLIIT_Logo_Crest.png"
-                    className="w-28 h-36 object-cover"
+                    className="w-10 h-10 object-cover"
                   />
                 </div>
-                <div className="w-3/4 p-4">
-                  <p className="text-xl font-bold">Bachelor of Science</p>
-                  <p className="text-xl ">
+                <div className="text-white p-2">
+                  <p className="text-lg font-bold">Bachelor of Science</p>
+                  <p className="text-sm">
                     Sri Lanka Institute of Information Technology (SLIIT)
                   </p>
                   <br />
-                  <br />
-                  <p>2022 - 2025 | Reading</p>
+                  <p className="text-sm">2022 - 2025 | Reading</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center justify-center mt-10">
-              <div className="containerr border border-solid border-black w-3/4 flex">
-                <div className="w-1/4  p-4 flex items-center justify-center">
+            <div className="containerr border border-transparent rounded-lg"></div>
+            <div className="containerr border border-transparent rounded-lg"></div>
+
+            {/* 2nd Container - Right Column */}
+            <div className="containerr border border-solid border-white rounded-lg p-4 w-3/5 self-end">
+              <div className="flex">
+                <div className="p-2 flex items-center">
                   <img
                     src="https://studyway-resources.s3.amazonaws.com/profilePictures/1676538581371.jpg"
-                    className="w-full h-32 object-cover"
+                    className="w-10 h-10 object-cover"
                   />
                 </div>
-                <div className="w-3/4 p-4">
-                  <p className="text-xl font-bold">
+                <div className="text-white p-2">
+                  <p className="text-lg font-bold">
                     Diploma in Human Resource Management
                   </p>
-                  <p className="text-xl ">
-                    Lanka Professional Education Center
-                  </p>
+                  <p className="text-sm">Lanka Professional Education Center</p>
                   <br />
-                  <br />
-                  <p>2024 - 2025 | Reading </p>
+                  <p className="text-sm">2024 - 2025 | Reading</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center justify-center mt-10">
-              <div className="containerr border border-solid border-black w-3/4 flex">
-                <div className="w-1/4  p-4 flex items-center justify-center">
+            {/* 3rd Container - Left Column */}
+            <div className="containerr border border-solid border-white rounded-lg p-4 w-3/5 self-start">
+              <div className="flex">
+                <div className="p-2 flex items-center">
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIyUFViTOmGElYZ3XQBP4q_c0qN8rn7vkEFA&s"
-                    className="w-full h-32 object-cover"
+                    className="w-10 h-10 object-cover"
                   />
                 </div>
-                <div className="w-3/4 p-4">
-                  <p className="text-xl font-bold">Accounting Assistant</p>
-                  <p className="text-xl ">
+                <div className="text-white p-2">
+                  <p className="text-lg font-bold">Accounting Assistant</p>
+                  <p className="text-sm">
                     Association of Accounting Technicians of Sri Lanka (AAT)
                   </p>
                   <br />
-                  <br />
-                  <p>2019 | Completed </p>
+                  <p className="text-sm">2019 | Completed</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center justify-center mt-10">
-              <div className="containerr border border-solid border-black w-3/4 flex">
-                <div className="w-1/4  p-4 flex items-center justify-center">
+            <div className="containerr border border-transparent rounded-lg"></div>
+            <div className="containerr border border-transparent rounded-lg"></div>
+
+            {/* 4th Container - Right Column */}
+            <div className="containerr border border-solid border-white rounded-lg p-4 w-3/5 self-end">
+              <div className="flex">
+                <div className="p-2 flex items-center">
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPAXJAWhMtBmrPybLVJvel3fKvFkUpjBubVQ&s"
-                    className="w-32 h-36 object-cover"
+                    className="w-10 h-10 object-cover"
                   />
                 </div>
-                <div className="w-3/4 p-4">
-                  <p className="text-xl font-bold">
+                <div className="text-white p-2">
+                  <p className="text-lg font-bold">
                     Computer Application Assistant [NVQ Level 3]
                   </p>
-                  <p className="text-xl ">NYSCO Vocational Training Centre</p>
+                  <p className="text-sm">NYSCO Vocational Training Centre</p>
                   <br />
-                  <br />
-                  <p>2019 | Completed </p>
+                  <p className="text-sm">2019 | Completed</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center justify-center mt-10">
-              <div className="containerr border border-solid border-black w-3/4 flex">
-                <div className="w-1/4  p-4 flex items-center justify-center">
+            {/* 5th Container - Left Column */}
+            <div className="containerr border border-solid border-white rounded-lg p-4 w-3/5 self-start">
+              <div className="flex">
+                <div className="p-2 flex items-center">
                   <img
                     src="/images/ssb.png"
-                    className="w-full h-32 object-cover"
+                    className="w-10 h-10 object-cover"
                   />
                 </div>
-                <div className="w-3/4 p-4">
-                  <p className="text-xl font-bold">School attended</p>
-                  <p className="text-xl ">
+                <div className="text-white p-2">
+                  <p className="text-lg font-bold">School attended</p>
+                  <p className="text-sm">
                     Mt/Sri Sangamitta Girls' National School
                   </p>
                   <br />
-                  <br />
-                  <p>2017 - 2021 | Completed</p>
+                  <p className="text-sm">2017 - 2021 | Completed</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center justify-center mt-10">
-              <div className="containerr border border-solid border-black w-3/4 flex">
-                <div className="w-1/4  p-4 flex items-center justify-center">
+            <div className="containerr border border-transparent rounded-lg"></div>
+            <div className="containerr border border-transparent rounded-lg"></div>
+
+            {/* 6th Container - Right Column */}
+            <div className="containerr border border-solid border-white rounded-lg p-4 w-3/5 self-end ">
+              <div className="flex">
+                <div className="p-2 flex items-center">
                   <img
                     src="/images/stg.png"
-                    className="w-24 h-32 object-cover"
+                    className="w-10 h-10 object-cover"
                   />
                 </div>
-                <div className="w-3/4 p-4">
-                  <p className="text-xl font-bold">School attended</p>
-                  <p className="text-xl "> ST.Thomas' Girls' School - Matale</p>
+                <div className="text-white p-2">
+                  <p className="text-lg font-bold">School attended</p>
+                  <p className="text-sm">ST.Thomas' Girls' School - Matale</p>
                   <br />
-                  <br />
-                  <p>2008 - 2017 | Completed</p>
+                  <p className="text-sm">2008 - 2017 | Completed</p>
                 </div>
               </div>
             </div>
           </div>
-          <br />
-          <br />
         </div>
       </div>
+
       <div className="page page5">
         <div>
           <div>
             <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200  sm:mt-8 sm:pt-6 lg:mx-0 lg:max-w-none lg:grid-cols-3"></div>
-            <h1 className="mt-10 text-4xl font-bold text-center mb-5">
+            <h1 className="mt-10 text-5xl text-white font-bold text-center mb-5">
               Projects
             </h1>
 
@@ -357,7 +380,7 @@ function Home() {
                     />
                   </div>
                   <div className="group relative">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                    <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-yellow-400">
                       <a href="#">
                         <span className="absolute inset-0"></span>
                         Online Auction System
@@ -403,7 +426,7 @@ function Home() {
                     />
                   </div>
                   <div className="group relative">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                    <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-yellow-400">
                       <a href="#">
                         <span className="absolute inset-0"></span>
                         Online Bidding System
@@ -443,12 +466,12 @@ function Home() {
                 <article className="flex max-w-xl flex-col items-start justify-between ">
                   <div className="">
                     <img
-                      src="https://sperotec.com/wp-content/uploads/2021/04/sensors-monitoring.png"
+                      src="https://www.polytheneuk.co.uk/wp-content/uploads/polytunnel-film-1024x683.jpg"
                       className="w-80 h-48 max-w-md"
                     />
                   </div>
                   <div className="group relative">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                    <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-yellow-400">
                       <a href="#">
                         <span className="absolute inset-0"></span>
                         Online Enclosed Polytunnel Management System

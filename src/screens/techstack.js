@@ -11,7 +11,7 @@ const TechStack = () => {
 
   return (
     <div>
-      <h1 className="mt-10 text-4xl font-bold text-center">Tech stack</h1>
+      <h1 className="mt-10 text-5xl text-white font-bold text-center">Tech stack</h1>
       <br />
       <br />
       <div className="flex justify-center">
@@ -41,8 +41,12 @@ const TechStack = () => {
           .filter((tech) => tech.category === selectedCategory)
           .map((tech, index) => (
             <div key={index} className="techstack">
-              <img src={tech.image} alt={tech.name} className="techstack-image" />
-              <h3>{tech.name}</h3>
+              <img
+                src={tech.image}
+                alt={tech.name}
+                className="techstack-image"
+              />
+              <h3 className="text-white">{tech.name}</h3>{" "}
               <p className="category">{tech.category}</p>
             </div>
           ))}

@@ -5,54 +5,55 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-pink-700">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <nav className="bg-gradient-to-r rgb(0, 0, 0), rgb(66, 66, 66)">
+      <div className="mx-auto max-w-none px-6 sm:px-8 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex">
-              <h3 className="text-xl font-extrabold text-gray-400 opacity-80">
-                PAMO<sup className="text-xs opacity-40">TC</sup>
-              </h3>
-            </div>
-            <div className="flex-1 flex justify-center">
-              <div className="hidden sm:ml-6 sm:block">
-                <div className="flex space-x-4">
-                  <Link
-                    to="/"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    to="/about"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
-                  >
-                    About
-                  </Link>
-                  <Link
-                    to="/tech-stack"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
-                  >
-                    Tech Stack
-                  </Link>
-                  <Link
-                    to="/education"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
-                  >
-                    Education
-                  </Link>
-                  <Link
-                    to="/projects"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
-                  >
-                    Projects
-                  </Link>
-                </div>
+          {/* Logo */}
+          <div className="flex items-center">
+            <h3 className="text-xl font-extrabold text-gray-400 opacity-80">
+              PAMO<sup className="text-xs opacity-40">TC</sup>
+            </h3>
+          </div>
+          {/* Navigation Links */}
+          <div className="flex-1 flex justify-end">
+            <div className="hidden sm:block">
+              <div className="flex space-x-8">
+                <Link
+                  to="/"
+                  className="rounded-md px-3 py-2 text-lg font-medium text-white  hover:text-yellow-400"
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/about"
+                  className="rounded-md px-3 py-2 text-lg font-medium text-white  hover:text-yellow-400"
+                >
+                  About
+                </Link>
+                <Link
+                  to="/tech-stack"
+                  className="rounded-md px-3 py-2 text-lg font-medium text-white hover:text-yellow-400"
+                >
+                  Tech Stack
+                </Link>
+                <Link
+                  to="/education"
+                  className="rounded-md px-3 py-2 text-lg font-medium text-white  hover:text-yellow-400"
+                >
+                  Education
+                </Link>
+                <Link
+                  to="/projects"
+                  className="rounded-md px-3 py-2 text-lg font-medium text-white  hover:text-yellow-400"
+                >
+                  Projects
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* Mobile Menu */}
       <div
         className={`${mobileMenuOpen ? "block" : "hidden"} sm:hidden`}
         id="mobile-menu"

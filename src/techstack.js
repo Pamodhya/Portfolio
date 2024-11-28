@@ -17,7 +17,7 @@ export const techstack = [
     {
         name: "HTML5",
         category: "Advance",
-        image: "https://static-00.iconduck.com/assets.00/html-5-icon-224x256-1b5ud2sy.png"
+        image: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/167_Html5_logo_logos-512.png"
     },
     {
         name: "CSS3",
@@ -47,7 +47,7 @@ export const techstack = [
     {
         name: "Next JS",
         category: "Good",
-        image: "https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png"
+        image: "https://global.discourse-cdn.com/auth0/optimized/2X/a/ae35edce19e64c53e5d455b22e8a2c82d093d4c9_2_556x500.png"
     },
     {
         name: "Node JS",
